@@ -208,10 +208,10 @@ public class AutoClickerGUI extends JFrame implements ActionListener{
 					System.exit(1);
 				}
 				// Declare variables to be read from the text fields
-				int delayNum;
-				int xCordNum;
-				int yCordNum;
-				long max;
+				int delayNum = 0;
+				int xCordNum = 0;
+				int yCordNum = 0;
+				long max = 0;
 				// Get the time between clicks, max number of clicks, and the coordinates of the mouse from the GUI panels
 				try {
 					delayNum = Integer.parseInt(delay.getText());
@@ -224,7 +224,7 @@ public class AutoClickerGUI extends JFrame implements ActionListener{
 				}
 				// Get the type of mouse click the user wants
 				String selectedValue = clickingDropDownBox.getItemAt(clickingDropDownBox.getSelectedIndex());
-				int clickMask;
+				int clickMask = 0;
 				switch (selectedValue) {
 					case "Left Click":
 						clickMask = InputEvent.BUTTON1_DOWN_MASK;
